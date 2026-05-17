@@ -16,9 +16,10 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     const data = await res.json();
 
     if (data.status === "success") {
-        document.getElementById("message").innerText = "Registrasi berhasil, silakan login";
-        window.location.href = "index.html";
+        alert("Registrasi Berhasil! Silakan Klik OK Untuk Login.");
+        window.location.href = "index.html"; 
     } else {
         document.getElementById("message").innerText = data.message || "Gagal registrasi";
-    }
-});
+            }
+    });
+   
