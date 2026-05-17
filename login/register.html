@@ -126,29 +126,31 @@
 <body>
     <div class="registration-container">
         <h2>Register Your Account</h2>
-        <form action="#" method="POST">
+        <form id="registerForm">
             <div class="form-group">
-                <label for="full_name">Full Name</label>
-                <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+                <label for="username">Nama Pengguna</label>
+                <input type="text" id="username" required placeholder="Username">
             </div>
             <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="phone">Phone Number (Optional)</label>
+                <label for="phone">Nomor Telepon (Opsional)</label>
                 <input type="tel" id="phone" name="phone" placeholder="e.g., 03xx-xxxxxxx">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                <input type="password" id="password" required placeholder="Password">
             </div>
-          
-            <button type="submit" class="register-button">Register Account</button>
+              <p id="message"></p>
+            <button type="submit" class="register-button">Daftar</button>
         </form>
         <div class="registration-footer">
-            Already have an account? <a href="index.html">Login Here</a>
+            Sudah memiliki akun? <a href="index.html">Login di sini</a>
+            <p id="message"></p>
         </div>
     </div>
+    <script src="js/register.js" defer></script>
 </body>
 </html>
