@@ -1,45 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let username = localStorage.getItem("username");
-    
-    if (!username) {
-        const userObj = localStorage.getItem("user");
-        if (userObj) {
-            try {
-                const parsed = JSON.parse(userObj);
-                username = parsed.username || parsed.name;
-            } catch (e) {
-                username = userObj;
-                        }
-                    }
-          }
 
-    if (username) {
-        const userInfoEl = document.getElementById("userInfo");
-        if (userInfoEl) {
-            userInfoEl.innerText = "Halo, " + username;
-        }
+    function goLogin() {
+        window.location.href = "login/index.html";
+    }
 
+    function logout() {
+        localStorage.removeItem("username");
+        location.reload();
+    }
 
-        const authAreaEl = document.getElementById("authArea");
-        if (authAreaEl) {
-            authAreaEl.innerHTML = `
-                <button onclick="logout()" class="nav-cta">LOGOUT</button>
-                    `;
-                        }
-                        }
-            });
+    const user = localStorage.getItem("username");
 
-        function goLogin() {
-            window.location.href = "login/index.html";
-            }
+    if (user) {
+        document.getElementById("userInfo").innerText = "Halo, " + user;
 
-        function logout() {
-            localStorage.removeItem("username");
-            localStorage.removeItem("user");
-            localStorage.removeItem("token");
-    
-    location.reload();
-}
+        document.getElementById("authArea").innerHTML = `
+            <button onclick="logout()" class="nav-cta">Logout</button>
+        `;
+    }
 
-window.goLogin = goLogin;
-window.logout = logout;
+    window.goLogin = goLogin;
+    window.logout = logout;
+
+});
