@@ -699,3 +699,74 @@
     })();
 
 })(document.documentElement);
+
+
+.layout-video-keterangan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    align-items: flex-start;
+}
+
+
+.kolom-video-besar {
+    flex: 2;
+    min-width: 500px; 
+}
+
+
+.kolom-keterangan-teks {
+    flex: 1;
+    min-width: 280px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .layout-video-keterangan {
+        flex-direction: column;
+    }
+    .kolom-video-besar, .kolom-keterangan-teks {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+.youtube-cover-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Biar ada efek bayangan elegan */
+}
+
+.youtube-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.youtube-cover-wrapper:hover .youtube-cover-img {
+    transform: scale(1.03);
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+}
+
+.testimonials-card-text {
+    padding-top: 10px;
+}
+.testimonials-card-text .testimonials-slider__author {
+    margin-bottom: 20px;
+}
