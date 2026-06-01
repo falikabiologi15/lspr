@@ -649,7 +649,6 @@
         ssMobileMenu();
         ssScrollSpy();
         ssGLightbox();
-        ssSwiper();
         sstabs();
         ssMailChimpForm();
         ssAlertBoxes();
@@ -661,8 +660,3 @@
 
 
 
-.deskripsi-video {
-    color: #e5e5e5;
-    line-height: 1.6;
-    font-size: 1.6px;
-}
