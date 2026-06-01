@@ -704,23 +704,21 @@
 .layout-video-keterangan {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; 
-    align-items: flex-start;
+    gap: 40px;
+    align-items: center; /* Membuat teks di kanan sejajar di tengah tinggi video */
 }
-
 
 .kolom-video-besar {
     flex: 2;
-    min-width: 500px; 
+    min-width: 450px;
 }
-
 
 .kolom-keterangan-teks {
     flex: 1;
     min-width: 280px;
 }
 
-
+/* Responsif untuk HP (Layar di bawah 800px otomatis menumpuk ke bawah) */
 @media screen and (max-width: 800px) {
     .layout-video-keterangan {
         flex-direction: column;
@@ -731,7 +729,7 @@
     }
 }
 
-
+/* Desain Kotak Video 16:9 */
 .youtube-cover-wrapper {
     position: relative;
     width: 100%;
@@ -739,7 +737,7 @@
     border-radius: 10px;
     overflow: hidden;
     background-color: #000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Biar ada efek bayangan elegan */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .youtube-cover-img {
@@ -764,9 +762,30 @@
     pointer-events: none;
 }
 
-.testimonials-card-text {
-    padding-top: 10px;
+/* Styling Teks Keterangan di Kanan */
+.keterangan-video-box h4 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 2.4px; /* Sesuaikan ukuran judul di websitemu */
 }
-.testimonials-card-text .testimonials-slider__author {
-    margin-bottom: 20px;
+
+.channel-link-text {
+    font-size: 1.4px;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+}
+
+.channel-link-text a {
+    color: #ff4444; /* Warna merah khas YouTube */
+    text-decoration: none;
+}
+
+.channel-link-text a:hover {
+    text-decoration: underline;
+}
+
+.deskripsi-video {
+    color: #e5e5e5;
+    line-height: 1.6;
+    font-size: 1.6px;
 }
