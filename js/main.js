@@ -182,47 +182,6 @@
     } // end ssGLightbox
 
 
-   /* swiper
-    * ------------------------------------------------------ */ 
-    const ssSwiper = function() {           
-    
-        const testimonialSlider = function() {
-
-            const tSlider = document.querySelector('.testimonials-slider');            
-            if (!(tSlider)) return;
-
-            const slider = new Swiper(tSlider, {
-
-                slidesPerView: 1,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    // when window width is > 400px
-                    401: {
-                        slidesPerView: 1,
-                        spaceBetween: 20
-                    },
-                    // when window width is > 800px
-                    801: {
-                        slidesPerView: 2,
-                        spaceBetween: 44
-                    },
-                    // when window width is > 1200px
-                    1201: {
-                        slidesPerView: 3,
-                        spaceBetween: 44
-                    }
-                }
-            });
-
-        }; // end testimonialSlider
-        
-        testimonialSlider();
-
-    }; // end ssSwiper
-
 
    /* tabs
     * ---------------------------------------------------- */ 
